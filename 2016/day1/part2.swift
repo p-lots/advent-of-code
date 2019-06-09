@@ -86,5 +86,3 @@ func part2(_ input: String) -> Int {
     let aocDay2 = AdventOfCodeDay2()
     return aocDay2.evaluate(input)
 }
-
-print(part2("R8, R4, R4, R8"))
