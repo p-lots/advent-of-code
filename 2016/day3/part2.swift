@@ -1,49 +1,27 @@
-// TODO: Cleanup
-
 import Foundation
 
 func parseInput(_ input: String) -> [[Int]] {
     let lines = input.components(separatedBy: "\n").map { $0.components(separatedBy: " ").compactMap { Int(String($0)) } }
     var ret = [[Int]]()
-    var breakAll = false
-    var counter = 0
-    var j = 0
-    var totalCounter = 0
-    for _ in lines {
-        for i in 0..<3 {
-            var toAppend = [Int]()
-                while counter < 3 {
-                    toAppend.append(lines[j][i])
-                    counter += 1
-                    j += 1
-                    if j >= lines.count {
-                        j = 0
-                        totalCounter += 1
-                        if totalCounter == 2 {
-                            breakAll = true
-                            break
-                        }
-                    }
-                }
-            ret.append(toAppend)
-            toAppend = []
-            counter = 0
+    var startIdx = 0
+    for _ in 0..<(lines.count / 3) {
+        for j in 0..<3 {
+            var triangle = [Int]()
+            for i in startIdx..<(startIdx + 3) {
+                triangle.append(lines[i][j])
+            }
+            ret.append(triangle)
         }
-        if breakAll {
-            break
-        }
+        startIdx += 3
     }
     return ret
 }
 
 func part2(_ input: String) -> Int {
-    let result = parseInput(input)
-    var ret = 0
-    for line in result {
+    let lines = parseInput(input)
+    let ret = lines.map { (line: [Int]) -> Int in 
         let lineSorted = line.sorted(by: <)
-        if lineSorted[0] + lineSorted[1] > lineSorted[2] {
-            ret += 1
-        }
+        return (lineSorted[0] + lineSorted[1] > lineSorted[2] ? 1 : 0)
     }
-    return ret
+    return ret.reduce(0, +)
 }
