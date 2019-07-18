@@ -1,32 +1,19 @@
 import Foundation
 
-func makeLetterCounts(for word: String) -> [Character: Int] {
-    var ret = [Character: Int]()
-    for ch in word {
-        if let currChCount = ret[ch] {
-            ret[ch] = currChCount + 1
+func parseLine(_ line: String) -> Bool {
+    let words = line.components(separatedBy: " ")
+    var wordSet = Set<String>()
+    for word in words {
+        if wordSet.contains(word) {
+            return false
         } else {
-            ret[ch] = 1
+            wordSet.insert(word)
         }
     }
-    return ret
-}
-
-func parseLine(_ line: String) -> Int {
-    var alreadySeen = Set<[Character: Int]>()
-    let lineSplit = line.components(separatedBy: " ")
-    for word in lineSplit {
-        let letterCounts = makeLetterCounts(for: word)
-        if alreadySeen.contains(letterCounts) {
-            return 0
-        } else {
-            alreadySeen.insert(letterCounts)
-        }
-    }
-    return 1
+    return true
 }
 
 func part1(_ input: String) -> Int {
     let inputSplit = input.components(separatedBy: "\n")
-    return inputSplit.map { parseLine($0) }.reduce(0, +)
+    return inputSplit.filter { parseLine($0) }.count
 }
