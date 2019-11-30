@@ -8,4 +8,5 @@ func part2(_ input: String) -> Int {
 		return 2 * dimensions[0] + 2 * dimensions[1] +
 			dimensions[0] * dimensions[1] * dimensions[2]
 	}.reduce(0, +)
+	return result
 }
