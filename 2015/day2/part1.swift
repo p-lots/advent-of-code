@@ -10,4 +10,5 @@ func part1(_ input: String) -> Int {
 			2 * dimensions[2] * dimensions[0] +
 			dimensions[0] * dimensions[1]
 	}.reduce(0, +)
+	return result
 }
