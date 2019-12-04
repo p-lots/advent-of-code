@@ -24,3 +24,5 @@ For example, given the following specification, numbers with the same hundreds d
 ```
 
 In your puzzle input, and instead reading by columns, **how many** of the listed triangles are **possible**?
+
+https://adventofcode.com/2016/day/3

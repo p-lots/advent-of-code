@@ -33,3 +33,5 @@ For example:
 Unfortunately, the computer you brought probably doesn't have enough memory to actually decompress the file; you'll have to **come up with another way** to get its decompressed length.
 
 What is the **decompressed length** of the file using this improved format?
+
+https://adventofcode.com/2016/day/9
