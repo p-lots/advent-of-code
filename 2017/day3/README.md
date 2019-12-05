@@ -46,3 +46,5 @@ Once a square is written, its value does not change. Therefore, the first few sq
 ```
 
 What is the **first value written** that is **larger** than your puzzle input?
+
+https://adventofcode.com/2017/day/3

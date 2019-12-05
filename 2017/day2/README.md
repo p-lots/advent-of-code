@@ -43,3 +43,5 @@ For example, given the following spreadsheet:
 In this example, the sum of the results would be `4 + 3 + 2 = 9`.
 
 What is the **sum of each row's result** in your puzzle input?
+
+https://adventofcode.com/2017/day/2

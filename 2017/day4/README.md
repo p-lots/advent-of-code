@@ -25,3 +25,5 @@ For example:
 * `oiii ioii iioi iiio` is not valid - any of these words can be rearranged to form any other word.
 
 Under this new system policy, **how many passphrases are valid?**
+
+https://adventofcode.com/2017/day/4

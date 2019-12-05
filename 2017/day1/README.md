@@ -36,3 +36,5 @@ For example:
 * `12131415` produces `4`.
 
 **What is the solution** to your new captcha?
+
+https://adventofcode.com/2017/day/1
