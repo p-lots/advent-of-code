@@ -41,3 +41,5 @@ For example, again using the polymer `dabAcCaCBAcCcaDA` from above:
 In this example, removing all `C/c` units was best, producing the answer **4**.
 
 **What is the length of the shortest polymer you can produce** by removing all units of exactly one type and fully reacting the result?
+
+https://adventofcode.com/2018/day/5
